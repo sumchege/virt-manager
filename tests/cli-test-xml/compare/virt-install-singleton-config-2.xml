@@ -151,6 +151,9 @@
     <tpm model="tpm-crb">
       <backend type="emulator" version="2.0"/>
     </tpm>
+    <tpm model="tpm-spapr">
+      <backend type="emulator" version="2.0"/>
+    </tpm>
     <graphics type="vnc" port="-1"/>
     <watchdog model="ib700" action="pause"/>
     <memballoon model="virtio"/>
@@ -326,6 +329,9 @@
       </backend>
     </tpm>
     <tpm model="tpm-crb">
+      <backend type="emulator" version="2.0"/>
+    </tpm>
+    <tpm model="tpm-spapr">
       <backend type="emulator" version="2.0"/>
     </tpm>
     <graphics type="vnc" port="-1"/>

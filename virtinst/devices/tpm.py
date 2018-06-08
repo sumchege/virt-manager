@@ -28,8 +28,9 @@ class DeviceTpm(Device):
 
     MODEL_TIS = "tpm-tis"
     MODEL_CRB = "tpm-crb"
+    MODEL_SPAPR = "tpm-spapr"
     MODEL_DEFAULT = "default"
-    MODELS = [MODEL_TIS, MODEL_CRB]
+    MODELS = [MODEL_TIS, MODEL_CRB, MODEL_SPAPR]
 
     @staticmethod
     def get_pretty_type(tpm_type):
@@ -45,6 +46,8 @@ class DeviceTpm(Device):
             return _("TIS")
         if tpm_model == DeviceTpm.MODEL_CRB:
             return _("CRB")
+        if tpm_model == DeviceTpm.MODEL_SPAPR:
+            return _("SPAPR")
         return tpm_model
 
     def supports_property(self, propname):
